@@ -19,6 +19,7 @@
       <div class="overlay"></div>
 
       <div class="text">
+        <h1 id="textbox"></h1>
         <h2>Fantasy Life</h2>
         <h3>Explore Something New</h3>
         <p>
@@ -59,6 +60,18 @@
         menuToggle.classList.toggle("active");
         showcase.classList.toggle("active");
       });
+
+      let number = getRandomInt(3);
+      let message = "今日の運勢は"; 
+      if (number == 0) {
+        message += "凶です！！";
+      }else if (number == 1) {
+        message += "吉です！！";
+      }else {
+        message += "大吉です！！";
+      }
+      let textbox_element = document.getElementById('textbox');
+      textbox_element.textContent = message;
     </script>
   </body>
 </html>

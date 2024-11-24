@@ -61,7 +61,7 @@
         showcase.classList.toggle("active");
       });
 
-      let number = getRandomInt(3);
+      let number = Math.floor(Math.random() * (3));
       let message = "今日の運勢は"; 
       if (number == 0) {
         message += "凶です！！";
@@ -71,7 +71,7 @@
         message += "大吉です！！";
       }
       let textbox_element = document.getElementById('textbox');
-      textbox_element.textContent = message;
+      textbox_element.innerHTML = message;
     </script>
   </body>
 </html>
